@@ -71,7 +71,7 @@ body
 	text-align: center
 	position: relative
 	outline: none
-	transition: background-color .1s ease
+	transition: background-color .2s ease
 	&:focus, &:hover
 		text-decoration: none
 		color: #fff
@@ -101,6 +101,17 @@ body
 			background-color: lighten(#26a6d1, 10%)
 		&:active
 			background-color: darken(#26a6d1, 10%)
+	&.button-white
+		background-color: #ffffff
+		border: 1px solid #515151
+		color: #515151
+		padding: 20px 25px
+		&:hover
+			background-color: #515151
+			color: #ffffff
+		&:active
+			background-color: darken(#515151, 10%)
+			color: #ffffff
 
 
 .wrapper
@@ -328,6 +339,124 @@ body
 		margin-top: 28px
 		padding: 18px 28px
 		white-space: nowrap
+
+/*============ section-3 ============*/
+.section-4
+	padding-top: 80px
+	padding-bottom: 70px
+	padding-left: 10px
+	max-width: 980px
+	margin: 0 auto
+
+	& .header-project-section
+		padding-bottom: 60px
+
+	& .text
+		display: inline-block
+		width: 65%
+
+	& .head-text
+		font-size: 29.2px
+		font-weight: 600
+
+	& .btn, .text
+		display: inline-block
+		white-space: normal
+		vertical-align: middle
+		position: relative
+	& .btn
+		width: 34%
+		text-align: end
+
+.project-list
+	margin: 0 -2%
+
+	& .item
+		width: 29%
+		margin: 0 2%
+		min-height: 100px
+		//background-color: #515151
+		display: inline-block
+		overflow: hidden
+		border-radius: 15px
+		border: 1px solid #e5e5e5
+		background-color: #f9f9f9
+		//background: url('../img/photo-1.jpg') center/cover no-repeat
+		& .photo
+			width: 100%
+			max-height: 225px
+			position: relative
+
+		& .label-new
+			position: absolute
+			top: -70px
+			left: -70px
+			width: 140px
+			height: 140px
+			background-color: #86ad09
+			color: #ffffff
+			font-weight: 600
+			text-align: center
+			transform: rotate(-45deg)
+			& span
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+
+		& .info
+			padding: 25px
+			font-weight: 600
+
+			& .title
+				font-weight: bold
+				padding: 0
+				font-size: 17.2px
+				& .city
+					text-transform: uppercase
+
+			& p
+				font-size: 13.2px
+				line-height: 27px
+				padding: 10px 0
+
+			.progress-bar
+				padding: 15px 0
+
+			& .meter
+				height: 15px
+				position: relative
+				background: #e3e3e3
+				border-radius: 25px
+				box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3)
+				& > span
+					display: block
+					height: inherit
+					border-top-left-radius: 25px
+					border-bottom-left-radius: 25px
+					background-color: #add136
+					z-index: 10
+					overflow: hidden
+
+			& .progress-bar-info
+				font-size: 13.2px
+				padding-bottom: 30px
+				border-bottom: 1px solid #e3e3e3
+				text-transform: capitalize
+				& .progress
+					display: inline-block
+					float: left
+				& .days
+					display: inline-block
+					float: right
+
+			& .pr-det
+				display: inline-block
+				float: right
+				padding: 25px 40px 20px 0
+				font-size: 15.2px
+				text-transform: capitalize
+				color: #515151
 
 
 @import "media" // Всегда в конце
