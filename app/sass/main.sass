@@ -88,9 +88,10 @@ body
 		margin-top: 21px
 		margin-right: 10px
 		padding: 8px 31px
-		font-size: 13px
+		font-size: 13.2px
 		background-color: #bcda5c
 		border-radius: 50px
+		text-transform: uppercase
 		&:hover
 			background-color: lighten(#bcda5c, 10%)
 		&:active
@@ -369,11 +370,11 @@ body
 		text-align: end
 
 .project-list
-	margin: 0 -2%
+	margin: 0 -1.5%
 
 	& .item
 		width: 29%
-		margin: 0 2%
+		margin: 0 1.5%
 		min-height: 100px
 		//background-color: #515151
 		display: inline-block
@@ -389,8 +390,8 @@ body
 
 		& .label-new
 			position: absolute
-			top: -70px
-			left: -70px
+			top: -85px
+			left: -85px
 			width: 140px
 			height: 140px
 			background-color: #86ad09
@@ -412,10 +413,16 @@ body
 				font-weight: bold
 				padding: 0
 				font-size: 17.2px
+				width: 150%
 				& .city
 					text-transform: uppercase
 
-			& p
+			& p.clip
+				max-height: 150px
+				overflow: hidden
+				word-wrap: break-word
+				text-overflow: clip
+				width: 150%
 				font-size: 13.2px
 				line-height: 27px
 				padding: 10px 0
@@ -453,10 +460,23 @@ body
 			& .pr-det
 				display: inline-block
 				float: right
-				padding: 25px 40px 20px 0
+				margin: 25px 15px 20px 0
 				font-size: 15.2px
 				text-transform: capitalize
 				color: #515151
-
+				& .fa
+					font-size: 25px
+					position: relative
+					top: 4px
+					left: 15px
+					color: #86ad09
+					transition: left .2s ease
+				&:focus, &:hover
+					text-decoration: none
+					color: lighten(#515151, 20%)
+					& .fa
+						left: 20px
+				&:active
+					color: darken(#515151, 10%)
 
 @import "media" // Всегда в конце
