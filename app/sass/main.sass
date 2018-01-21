@@ -201,8 +201,14 @@ body
 	padding-bottom: 85px
 	text-align: center
 	color: #515151
-	& img
+	//& img
+	//	margin-bottom: 36px
+	& .img-shape
+		display: inline-block
 		margin-bottom: 36px
+		width: 58px
+		height: 58px
+		background: url('../img/shape-info.svg') center/cover no-repeat
 	& p:first-of-type
 		max-width: 500px
 		margin: 0 auto
@@ -274,10 +280,19 @@ body
 	margin: 0 auto
 	padding-top: 90px
 	padding-bottom: 110px
+	padding-left: 90px
+	padding-right: 20px
 	white-space: nowrap
 	& img
 		display: inline-block
 		padding: 0 53px 0 90px
+	& .img-glasses
+		display: inline-block
+		width: 113px
+		height: 102px
+		margin-right: 53px
+		background: url('../img/glasses.png') center/cover no-repeat
+		vertical-align: middle
 	& .info-text
 		max-width: 70%
 		display: inline-block
@@ -294,22 +309,31 @@ body
 /*============ section-3 ============*/
 
 .section-3
+	position: relative
 	> div
 		padding-top: 40px
 		padding-bottom: 46px
 		width: 50%
-		float: left
+		//float: left
 		min-height: 250px
+		height: 100%
 
 	& .left-section
 		background-color: #e2f8ff
 		padding-left: 10%
 		padding-right: 60px
 		white-space: nowrap
-		& img, .info-text
+		position: relative
+		.info-text
 			display: inline-block
 			white-space: normal
 			vertical-align: middle
+		& .img-left-section
+			display: inline-block
+			vertical-align: middle
+			height: 112px
+			width: 133px
+			background: url('../img/armchair.png') center/cover no-repeat
 		& .info-text
 			width: 70%
 			padding-left: 46px
@@ -324,9 +348,18 @@ body
 		padding-left: 60px
 		padding-right: 140px
 		white-space: nowrap
-		& img, .info-text
+		position: absolute
+		right: 0
+		top: 0
+		& .info-text
 			display: inline-block
 			white-space: normal
+			vertical-align: middle
+		& .img-right-section
+			display: inline-block
+			height: 92px
+			width: 101px
+			background: url('../img/purse.png') center/cover no-repeat
 			vertical-align: middle
 		& .info-text
 			width: 70%
@@ -343,13 +376,9 @@ body
 
 /*============ section-3 ============*/
 .section-4
-	//padding-top: 80px
-	//padding-bottom: 70px
-	//padding-left: 10px
 	padding: 80px 1.5% 70px
 	max-width: 980px
 	margin: 0 auto
-	//padding: 0 1.5%
 
 	& .header-project-section
 		padding-bottom: 60px
@@ -387,8 +416,10 @@ body
 		//background: url('../img/photo-1.jpg') center/cover no-repeat
 		& .photo
 			width: 100%
-			max-height: 225px
+			min-height: 225px
 			position: relative
+			display: inline-block
+			background: url('../img/photo-1.jpg') center/cover no-repeat
 
 		& .label-new
 			position: absolute
@@ -480,5 +511,7 @@ body
 						left: 20px
 				&:active
 					color: darken(#515151, 10%)
+
+
 
 @import "media" // Всегда в конце
