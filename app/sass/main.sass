@@ -374,11 +374,11 @@ body
 		padding: 18px 28px
 		white-space: nowrap
 
-/*============ section-3 ============*/
+/*============ section-4 ============*/
 .section-4
-	padding: 80px 1.5% 70px
+	padding: 80px 1.5% 0
 	max-width: 980px
-	margin: 0 auto
+	margin: 0 auto -45px auto
 
 	& .header-project-section
 		padding-bottom: 60px
@@ -512,6 +512,107 @@ body
 				&:active
 					color: darken(#515151, 10%)
 
+/*============ section-5 ============*/
+
+.section-5
+	min-height: 670px
+	width: 100%
+	position: relative
+	background: url('../img/bg.png') center/cover no-repeat
+	padding-top: 120px
+
+	& .title
+		font-size: 39.2px
+		font-weight: 600
+		color: #86ad09
+		padding-bottom: 40px
+
+	& .inner-wrapper
+		max-width: 940px
+		margin: 0 auto
+		padding: 0 1.5%
+		text-align: center
+
+	& p
+		font-size: 19.2px
+		line-height: 38px
+
+	& .comment-list
+		//margin-top: 90px
+		text-align: start
+		overflow: hidden
+		white-space: nowrap
+		margin: 90px -4% 0
+		padding: 5px
+
+	& .comment-item
+		display: inline-block
+		max-width: 42%
+		white-space: normal
+		margin: 0 4%
+		position: relative
+
+		& .cloud
+			background-color: #ffffff
+			padding: 22px 32px
+			border-radius: 15px
+			text-align: center
+			&-title
+				font-size: 21.2px
+				color: #86ad09
+
+			&-text
+				font-size: 13.2px
+				line-height: 23px
+
+		& .triangle
+			width: 0
+			height: 0
+			margin-left: 20%
+			border-top: 20px solid #ffffff
+			border-right: 20px solid transparent
+
+		& .commentator
+			margin-left: 15%
+			margin-top: 10px
+
+			&-img
+				width: 60px
+				height: 60px
+				border-radius: 10px
+				background: url('../img/commentator.jpg') center/cover no-repeat
+				display: inline-block
+				vertical-align: middle
+
+			&-name
+				display: inline-block
+				font-size: 15.2px
+				font-weight: 600
+
+
+/*============ section-6 ============*/
+
+.section-6
+	padding: 65px 0 38px
+	border-bottom: 1px solid #6d6e70
+
+	& .partner-list
+		max-width: 1020px
+		margin: 0 auto
+		overflow: hidden
+		text-align: center
+
+	& .partner-item
+		display: inline-block
+		width: 140px
+		height: 32px
+		background: url("../img/partner-1.png") center/cover no-repeat
+
+.footer
+	padding-top: 25px
+	padding-bottom: 10px
+	font-size: 13.2px
+	text-align: center
 
 
 @import "media" // Всегда в конце
