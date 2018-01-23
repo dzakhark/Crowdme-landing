@@ -65,6 +65,7 @@ body
 	padding: 16px 45px
 	font-size: 15px
 	text-transform: capitalize
+	white-space: nowrap
 	font-weight: 600
 	letter-spacing: 1px
 	border-radius: 10px
@@ -83,19 +84,7 @@ body
 		background-color: darken($accent, 5%)
 		&::after
 			opacity: .32
-	&.button-login
-		float: right
-		margin-top: 21px
-		margin-right: 10px
-		padding: 8px 31px
-		font-size: 13.2px
-		background-color: #bcda5c
-		border-radius: 50px
-		text-transform: uppercase
-		&:hover
-			background-color: lighten(#bcda5c, 10%)
-		&:active
-			background-color: darken(#bcda5c, 10%)
+
 	&.button-blue
 		background-color: #26a6d1
 		&:hover
@@ -114,10 +103,17 @@ body
 			background-color: darken(#515151, 10%)
 			color: #ffffff
 
+.clearfix::after
+	content: ""
+	display: block
+	clear: both
+	visibility: hidden
+	height: 0
 
 .wrapper
 	max-width: 1300px
 	margin: 0 auto
+	overflow: hidden
 
 .header
 	min-height: 80px
@@ -125,46 +121,81 @@ body
 	max-width: 1028px
 	margin: 0 auto
 	position: relative
+	z-index: 20
+	background: #ffffff
 
-.logo
-	float: left
-	margin-left: 10px
-	line-height: 77px
-	& a
-		font-family: 'nunito-ex', sans-serif
-		font-size: 31.2px
+	.hamburger
+		position: absolute
+		top: 10px
+		right: 0
+		display: none
+
+	.logo
+		float: left
+		margin-left: 10px
+		margin-right: 138px
 		line-height: 77px
-		color: #6d6e70
-		text-transform: uppercase
-		text-decoration: none
-		&:hover
+		white-space: nowrap
+		& a
+			font-family: 'nunito-ex', sans-serif
+			font-size: 31.2px
+			line-height: 77px
+			color: #6d6e70
+			text-transform: uppercase
 			text-decoration: none
-	& img
-		width: 33px
-		height: 100%
-		position: relative
-		top: -6px
-		margin-right: 10px
+			&:hover
+				text-decoration: none
+		& img
+			width: 33px
+			height: 100%
+			position: relative
+			top: -6px
+			margin-right: 10px
 
-.nav
-	float: right
-	white-space: nowrap
-	margin-right: 7%
-	margin-left: 7%
-	overflow: hidden
-	line-height: 77px
-	& li
+	.nav
+		white-space: nowrap
+		padding-top: 20px
 		display: inline-block
-		text-decoration: none
-		text-transform: uppercase
-		font-size: 13.2px
-		font-weight: 600
-		padding-right: 2%
+		position: relative
+		transition: all 1s ease
+		& li
+			display: inline-block
+			text-decoration: none
+			text-transform: uppercase
+			font-size: 13.2px
+			font-weight: 600
+			padding-right: 2%
+			vertical-align: middle
+			& a
+				color: #515151
+				&:focus, &:hover
+					text-decoration: none
+				&:hover
+					color: lighten(#515151, 15%)
+				&:active
+					color: darken(#515151, 15%)
+			& .button-login
+				color: #ffffff
+				padding: 8px 31px
+				font-size: 13.2px
+				background-color: #bcda5c
+				border-radius: 50px
+				text-transform: uppercase
+				&:hover
+					color: #ffffff
+					background-color: lighten(#bcda5c, 10%)
+				&:active
+					color: #ffffff
+					background-color: darken(#bcda5c, 10%)
+
+		&.is-open
+			right: -1px
 
 .banner
 	min-height: 570px
 	width: 100%
 	position: relative
+	padding: 15px
 	//background: linear-gradient(rgba(109, 110, 112, 0.2), rgba(109, 110, 112, 0.2)), url('../img/banner.jpg') center/cover no-repeat
 	background: rgba(109, 110, 112, 0.2) url('../img/banner.jpg') center/cover no-repeat
 	&:before
@@ -197,10 +228,9 @@ body
 
 /*============ section-1 ============*/
 .section-1
-	padding-top: 100px
-	padding-bottom: 85px
 	text-align: center
 	color: #515151
+	padding: 100px 15px 85px 15px
 	//& img
 	//	margin-bottom: 36px
 	& .img-shape
@@ -222,26 +252,20 @@ body
 
 /*============ section-2 ============*/
 .section-2
-	padding-top: 60px
+	padding: 60px 10px 0
 	& .tabs
 		max-width: 980px
 		margin: 0 auto
-		padding-bottom: 37px
 		text-align: center
 		white-space: nowrap
-		& li
+		overflow: hidden
+		& .tab
 			display: inline-block
 			width: 33%
 			text-align: start
-			.underline
-				display: none
-				position: relative
-				top: 37px
-				width: 90%
-				height: 5px
-				background-color: $accent
-				&.active
-					display: block
+			padding-bottom: 37px
+			&.active
+				border-bottom: 1px solid #86ad09
 			&:first-child
 				text-align: start
 				padding-left: 10px
@@ -274,18 +298,15 @@ body
 	margin: 0 auto
 	height: 1px
 	background-color: #515151
+	position: relative
+	z-index: -5
+	top: -1px
 
 .panel
 	max-width: 980px
 	margin: 0 auto
-	padding-top: 90px
-	padding-bottom: 110px
-	padding-left: 90px
-	padding-right: 20px
+	padding: 90px 20px 90px 110px
 	white-space: nowrap
-	& img
-		display: inline-block
-		padding: 0 53px 0 90px
 	& .img-glasses
 		display: inline-block
 		width: 113px
@@ -314,61 +335,61 @@ body
 		padding-top: 40px
 		padding-bottom: 46px
 		width: 50%
-		//float: left
 		min-height: 250px
 		height: 100%
 
 	& .left-section
 		background-color: #e2f8ff
-		padding-left: 10%
+		float: left
 		padding-right: 60px
 		white-space: nowrap
-		position: relative
+		.cont
+			float: right
 		.info-text
 			display: inline-block
 			white-space: normal
 			vertical-align: middle
+			//width: 70%
+			padding-left: 46px
+			width: 260px
+			& p:first-child
+				font-size: 23.2px
+				font-weight: 600
+				padding-bottom: 35px
 		& .img-left-section
 			display: inline-block
 			vertical-align: middle
 			height: 112px
 			width: 133px
 			background: url('../img/armchair.png') center/cover no-repeat
+
+
+
+	& .right-section
+		background-color: #f5f9eb
+		padding-left: 60px
+		white-space: nowrap
+		float: right
+		& .cont
+			float: left
 		& .info-text
-			width: 70%
+			display: inline-block
+			white-space: normal
+			vertical-align: middle
+			width: 260px
 			padding-left: 46px
 			word-wrap: break-word
 			& p:first-child
 				font-size: 23.2px
 				font-weight: 600
 				padding-bottom: 35px
-
-	& .right-section
-		background-color: #f5f9eb
-		padding-left: 60px
-		padding-right: 140px
-		white-space: nowrap
-		position: absolute
-		right: 0
-		top: 0
-		& .info-text
-			display: inline-block
-			white-space: normal
-			vertical-align: middle
 		& .img-right-section
 			display: inline-block
 			height: 92px
 			width: 101px
 			background: url('../img/purse.png') center/cover no-repeat
 			vertical-align: middle
-		& .info-text
-			width: 70%
-			padding-left: 46px
-			word-wrap: break-word
-			& p:first-child
-				font-size: 23.2px
-				font-weight: 600
-				padding-bottom: 35px
+
 	& .button
 		margin-top: 28px
 		padding: 18px 28px
@@ -391,17 +412,18 @@ body
 		font-size: 29.2px
 		font-weight: 600
 
-	& .btn, .text
+	& .button, .text
 		display: inline-block
 		white-space: normal
 		vertical-align: middle
 		position: relative
-	& .btn
-		width: 34%
-		text-align: end
+	& .button
+		float: right
+		margin-top: 27px
 
 .project-list
 	margin: 0 -1.5%
+	text-align: center
 
 	& .item
 		width: 30%
@@ -413,6 +435,7 @@ body
 		border-radius: 15px
 		border: 1px solid #e5e5e5
 		background-color: #f9f9f9
+		text-align: start
 		//background: url('../img/photo-1.jpg') center/cover no-repeat
 		& .photo
 			width: 100%
@@ -441,24 +464,31 @@ body
 		& .info
 			padding: 25px
 			font-weight: 600
+			font-size: 13.2px
+
+			& .text
+				width: 100%
 
 			& .title
 				font-weight: bold
 				padding: 0
 				font-size: 17.2px
-				width: 150%
 				& .city
 					text-transform: uppercase
 
-			& p.clip
-				max-height: 150px
+			& .clip
 				overflow: hidden
-				word-wrap: break-word
-				text-overflow: clip
-				width: 150%
-				font-size: 13.2px
-				line-height: 27px
-				padding: 10px 0
+				position: relative
+				max-height: 240px
+				&::after
+					content: ''
+					text-align: right
+					position: absolute
+					bottom: 0
+					right: 0
+					width: 70%
+					height: 21.8px
+					background: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1) 50%)
 
 			.progress-bar
 				padding: 15px 0
@@ -520,6 +550,8 @@ body
 	position: relative
 	background: url('../img/bg.png') center/cover no-repeat
 	padding-top: 120px
+	padding-bottom: 50px
+	z-index: -5
 
 	& .title
 		font-size: 39.2px
@@ -542,52 +574,53 @@ body
 		text-align: start
 		overflow: hidden
 		white-space: nowrap
-		margin: 90px -4% 0
+		margin: 90px -1.5% 0
 		padding: 5px
 
-	& .comment-item
-		display: inline-block
-		max-width: 42%
-		white-space: normal
-		margin: 0 4%
-		position: relative
+		& .comment-item
+			display: inline-block
+			max-width: 42%
+			white-space: normal
+			margin: 0 4%
+			position: relative
+			font-weight: 600
 
-		& .cloud
-			background-color: #ffffff
-			padding: 22px 32px
-			border-radius: 15px
-			text-align: center
-			&-title
-				font-size: 21.2px
-				color: #86ad09
+			& .cloud
+				background-color: #ffffff
+				padding: 22px 32px
+				border-radius: 15px
+				text-align: center
+				&-title
+					font-size: 21.2px
+					color: #86ad09
 
-			&-text
-				font-size: 13.2px
-				line-height: 23px
+				&-text
+					font-size: 13.2px
+					line-height: 23px
 
-		& .triangle
-			width: 0
-			height: 0
-			margin-left: 20%
-			border-top: 20px solid #ffffff
-			border-right: 20px solid transparent
+			& .triangle
+				width: 0
+				height: 0
+				margin-left: 20%
+				border-top: 20px solid #ffffff
+				border-right: 20px solid transparent
 
-		& .commentator
-			margin-left: 15%
-			margin-top: 10px
+			& .commentator
+				margin-left: 15%
+				margin-top: 10px
 
-			&-img
-				width: 60px
-				height: 60px
-				border-radius: 10px
-				background: url('../img/commentator.jpg') center/cover no-repeat
-				display: inline-block
-				vertical-align: middle
+				&-img
+					width: 60px
+					height: 60px
+					border-radius: 10px
+					background: url('../img/commentator.jpg') center/cover no-repeat
+					display: inline-block
+					vertical-align: middle
 
-			&-name
-				display: inline-block
-				font-size: 15.2px
-				font-weight: 600
+				&-name
+					display: inline-block
+					font-size: 15.2px
+					font-weight: 600
 
 
 /*============ section-6 ============*/
@@ -613,6 +646,24 @@ body
 	padding-bottom: 10px
 	font-size: 13.2px
 	text-align: center
+
+.darken
+	display: none
+	position: absolute
+	z-index: 10
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	opacity: 0.5
+	background: #000000
+
+.is-active-dark
+	display: block
+
+.not-scrolling
+	overflow-y: hidden
+
 
 
 @import "media" // Всегда в конце

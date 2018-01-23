@@ -30,24 +30,27 @@
 
 </head>
 
-<body>
+<body style="">
 	<div class="wrapper">
-		<header class="header">
+		<header class="header clearfix">
 			<div class="logo">
 				<a href="#"><img src="img/logo-1.svg" alt="Crowdme">Crowdme</a>
 			</div>
-			<a class="button button-login" href="#">Login</a>
-			<div class="nav">
-				<nav>
-					<ul>
-						<li>Home</li>
-						<li>How it works</li>
-						<li>Discover the project</li>
-						<li>Blog</li>
-						<li>Find out more</li>
-					</ul>
-				</nav>
-			</div>
+			<button class="hamburger hamburger--spring" type="button">
+			  <span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			  </span>
+			</button>
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">How it works</a></li>
+					<li><a href="#">Discover the project</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Find out more</a></li>
+					<li><a class="button button-login" href="#">Login</a></li>
+				</ul>
+			</nav>
 		</header>
 		<section class="banner">
 			<div class="banner-composition">
@@ -59,37 +62,32 @@
 		<section class="content">
 			<div class="section-1">
 				<div class="img-shape"></div>
-				<!--<img src="img/shape-info.svg" alt="Info">-->
 				<p>Our work is the presentation of our capabilities.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ul labore et dolore magna alique. Ut enim ad minim veniam, quis nostrud exercitetion.</p>
 				<p>Ullamco laboris nist ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cilum dolore eu fugiat nulla pariatur.</p>
 			</div>
-			
+
 			<div class="section-2">
 				<ul class="tabs">
-					<li class="tab">
+					<li class="tab active">
 						<div>
 							<div class="tab-number active">1</div><span>Simple</span>
 						</div>
-						<div class="underline active"></div>
 					</li>
 					<li class="tab">
 						<div>
 							<div class="tab-number">2</div><span>Transparent</span>
 						</div>
-						<div class="underline"></div>
 					</li>
 					<li class="tab">
 						<div>
 							<div class="tab-number">3</div><span>Collaborative</span>
 						</div>
-						<div class="underline"></div>
 					</li>
 				</ul>
 				<div class="line"></div>
 				<div class="panel">
 					<div class="img-glasses"></div>
-					<!--<img src="img/glasses.png" alt="Glasses">-->
 					<div class="info-text">
 						<p>Browse projects, like booking a hotel online !</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -97,30 +95,32 @@
 				</div>
 			</div>
 
-			<div class="section-3">
+			<div class="section-3 clearfix">
 				<div class="left-section">
-					<div class="img-left-section"></div>
-					<!--<img src="img/armchair.png" alt="Properties">-->
-					<div class="info-text">
-						<p>Find Properties</p>
-						<p>Sign up to browse the portfolio. Your journey to becoming a real estate baron starts here.</p>
-						<a class="button button-blue" href="#">Become A Member</a>
+					<div class="cont">
+						<div class="img-left-section"></div>
+						<div class="info-text">
+							<p>Find Properties</p>
+							<p>Sign up to browse the portfolio. Your journey to becoming a real estate baron starts here.</p>
+							<a class="button button-blue" href="#">Become A Member</a>
+						</div>
 					</div>
 					<div style="clear: both"></div>
 				</div>
 
-				<div class="right-section">
-					<div class="img-right-section"></div>
-					<!--<img src="img/purse.png" alt="Purse">-->
-					<div class="info-text">
-						<p>Find Buyers</p>
-						<p>Sign up to browse the portfolio. Your journey to becoming a real estate baron starts here.</p>
-						<a class="button button-green" href="#">Submit Your Project</a>
+				<div class="right-section clearfix">
+					<div class="cont">
+						<div class="img-right-section"></div>
+						<div class="info-text">
+							<p>Find Buyers</p>
+							<p>Sign up to browse the portfolio. Your journey to becoming a real estate baron starts here.</p>
+							<a class="button button-green" href="#">Submit Your Project</a>
+						</div>
 					</div>
-					<div style="clear: both"></div>
+					<!--<div style="clear: both"></div>-->
 				</div>
 			</div>
-			<div style="clear: both"></div>
+			<!--<div style="clear: both"></div>-->
 
 
 			<div class="section-4">
@@ -129,20 +129,19 @@
 						<p class="head-text">Featured Projects</p>
 						<p>Brief details of new and popular projects. To view full listings, you will be required tosign up and become a member.</p>
 					</div>
-					<div class="btn">
-						<a class="button button-white" href="#">Become A Member</a>
-					</div>
+					<a class="button button-white" href="#">Become A Member</a>
 				</div>
 				<div class="project-list">
 					<div class="item">
 						<div class="photo" >
-							<!--<img src="img/photo-1.jpg" alt="" class="img-responsive">-->
 							<div class="label-new"><span>New</span></div>
 						</div>
 						<div class="info">
 							<div class="text">
 								<p class="title">Ontario Tower , <span class="city">London</span></p>
-								<p class="clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<div class="clip">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
 							</div>
 							<div class="progress-bar">
 								<div class="meter">
@@ -150,22 +149,22 @@
 								</div>
 							</div>
 							<div class="progress-bar-info">
-								<span class="progress">10% Funded</span>
+								<span class="progress">75% Funded</span>
 								<span class="days">8 Days Left</span>
 							</div>
 							<a href="#" class="pr-det">see project details<i class="fa fa-caret-right" aria-hidden="true"></i></a>
 						</div>
-
 					</div>
 					<div class="item">
-						<div class="photo">
-							<!--<img src="img/photo-2.jpg" alt="" class="img-responsive">-->
+						<div class="photo" >
 							<div class="label-new"><span>New</span></div>
 						</div>
 						<div class="info">
 							<div class="text">
 								<p class="title">Ontario Tower , <span class="city">London</span></p>
-								<p class="clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<div class="clip">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
 							</div>
 							<div class="progress-bar">
 								<div class="meter">
@@ -173,21 +172,22 @@
 								</div>
 							</div>
 							<div class="progress-bar-info">
-								<span class="progress">10% funded</span>
-								<span class="days">8 days left</span>
+								<span class="progress">75% Funded</span>
+								<span class="days">8 Days Left</span>
 							</div>
 							<a href="#" class="pr-det">see project details<i class="fa fa-caret-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 					<div class="item">
-						<div class="photo">
-							<!--<img src="img/photo-1.jpg" alt="" class="img-responsive">-->
+						<div class="photo" >
 							<div class="label-new"><span>New</span></div>
 						</div>
 						<div class="info">
 							<div class="text">
 								<p class="title">Ontario Tower , <span class="city">London</span></p>
-								<p class="clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<div class="clip">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
 							</div>
 							<div class="progress-bar">
 								<div class="meter">
@@ -195,7 +195,7 @@
 								</div>
 							</div>
 							<div class="progress-bar-info">
-								<span class="progress">10% Funded</span>
+								<span class="progress">75% Funded</span>
 								<span class="days">8 Days Left</span>
 							</div>
 							<a href="#" class="pr-det">see project details<i class="fa fa-caret-right" aria-hidden="true"></i></a>
@@ -246,8 +246,6 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 
@@ -269,6 +267,7 @@
 			<p>Copyright &copy 2001 - 2014  Cssauthor.com</p>
 		</footer>
 	</div>
+	<div class="darken"></div>
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
 
