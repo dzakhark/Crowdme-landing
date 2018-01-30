@@ -129,6 +129,7 @@ body
 		top: 10px
 		right: 0
 		display: none
+		outline: none
 
 	.logo
 		float: left
@@ -158,7 +159,7 @@ body
 		display: inline-block
 		position: relative
 		transition: all 1s ease
-		& li
+		li
 			display: inline-block
 			text-decoration: none
 			text-transform: uppercase
@@ -166,7 +167,7 @@ body
 			font-weight: 600
 			padding-right: 2%
 			vertical-align: middle
-			& a
+			a
 				color: #515151
 				&:focus, &:hover
 					text-decoration: none
@@ -174,7 +175,7 @@ body
 					color: lighten(#515151, 15%)
 				&:active
 					color: darken(#515151, 15%)
-			& .button-login
+			.button-login
 				color: #ffffff
 				padding: 8px 31px
 				font-size: 13.2px
@@ -198,7 +199,7 @@ body
 	padding: 15px
 	//background: linear-gradient(rgba(109, 110, 112, 0.2), rgba(109, 110, 112, 0.2)), url('../img/banner.jpg') center/cover no-repeat
 	background: rgba(109, 110, 112, 0.2) url('../img/banner.jpg') center/cover no-repeat
-	&:before
+	&::before
 		content: ""
 		position: absolute
 		top: 0
@@ -211,13 +212,13 @@ body
 		text-align: center
 		position: relative
 		color: #ffffff
-		& p:first-child
+		p:first-child
 			font-weight: 600
 			font-size: 40px
 			letter-spacing: 3px
-		& p
+		p
 			font-size: 33px
-		& .button
+		.button
 			font-size: 19.2px
 			color: #ffffff
 			border-radius: 10px
@@ -233,19 +234,19 @@ body
 	padding: 100px 15px 85px 15px
 	//& img
 	//	margin-bottom: 36px
-	& .img-shape
+	.img-shape
 		display: inline-block
 		margin-bottom: 36px
 		width: 58px
 		height: 58px
 		background: url('../img/shape-info.svg') center/cover no-repeat
-	& p:first-of-type
+	p:first-of-type
 		max-width: 500px
 		margin: 0 auto
 		font-size: 31.2px
 		font-weight: 600
 		line-height: 50px
-	& p
+	p
 		max-width: 920px
 		margin: 48px auto 0 auto
 		font-size: 19.2px
@@ -253,13 +254,13 @@ body
 /*============ section-2 ============*/
 .section-2
 	padding: 60px 10px 0
-	& .tabs
+	.tabs
 		max-width: 980px
 		margin: 0 auto
 		text-align: center
 		white-space: nowrap
 		overflow: hidden
-		& .tab
+		.tab
 			display: inline-block
 			width: 33%
 			text-align: start
@@ -276,7 +277,7 @@ body
 				padding-right: 10px
 				& .underline
 					right: -42px
-	& span
+	span
 		font-size: 30.2px
 
 .tab-number
@@ -307,20 +308,20 @@ body
 	margin: 0 auto
 	padding: 90px 20px 90px 110px
 	white-space: nowrap
-	& .img-glasses
+	.img-glasses
 		display: inline-block
 		width: 113px
 		height: 102px
 		margin-right: 53px
 		background: url('../img/glasses.png') center/cover no-repeat
 		vertical-align: middle
-	& .info-text
+	.info-text
 		max-width: 70%
 		display: inline-block
 		vertical-align: middle
 		font-size: 17.2px
 		white-space: normal
-		& p
+		p
 			line-height: 30px
 			&:first-child
 				font-size: 25.2px
@@ -338,7 +339,7 @@ body
 		min-height: 250px
 		height: 100%
 
-	& .left-section
+	.left-section
 		background-color: #e2f8ff
 		float: left
 		padding-right: 60px
@@ -352,11 +353,11 @@ body
 			//width: 70%
 			padding-left: 46px
 			width: 260px
-			& p:first-child
+			p:first-child
 				font-size: 23.2px
 				font-weight: 600
 				padding-bottom: 35px
-		& .img-left-section
+		.img-left-section
 			display: inline-block
 			vertical-align: middle
 			height: 112px
@@ -365,32 +366,32 @@ body
 
 
 
-	& .right-section
+	.right-section
 		background-color: #f5f9eb
 		padding-left: 60px
 		white-space: nowrap
 		float: right
-		& .cont
+		.cont
 			float: left
-		& .info-text
+		.info-text
 			display: inline-block
 			white-space: normal
 			vertical-align: middle
 			width: 260px
 			padding-left: 46px
 			word-wrap: break-word
-			& p:first-child
+			p:first-child
 				font-size: 23.2px
 				font-weight: 600
 				padding-bottom: 35px
-		& .img-right-section
+		.img-right-section
 			display: inline-block
 			height: 92px
 			width: 101px
 			background: url('../img/purse.png') center/cover no-repeat
 			vertical-align: middle
 
-	& .button
+	.button
 		margin-top: 28px
 		padding: 18px 28px
 		white-space: nowrap
@@ -401,23 +402,23 @@ body
 	max-width: 980px
 	margin: 0 auto -45px auto
 
-	& .header-project-section
+	.header-project-section
 		padding-bottom: 60px
 
-	& .text
+	.text
 		display: inline-block
 		width: 65%
 
-	& .head-text
+	.head-text
 		font-size: 29.2px
 		font-weight: 600
 
-	& .button, .text
+	.button, .text
 		display: inline-block
 		white-space: normal
 		vertical-align: middle
 		position: relative
-	& .button
+	.button
 		float: right
 		margin-top: 27px
 
@@ -425,7 +426,7 @@ body
 	margin: 0 -1.5%
 	text-align: center
 
-	& .item
+	.item
 		width: 30%
 		margin: 0 1.5%
 		min-height: 100px
@@ -435,14 +436,14 @@ body
 		border: 1px solid #e5e5e5
 		background-color: #f9f9f9
 		text-align: start
-		& .photo
+		.photo
 			width: 100%
 			min-height: 225px
 			position: relative
 			display: inline-block
 			background: url('../img/photo-1.jpg') center/cover no-repeat
 
-		& .label-new
+		.label-new
 			position: absolute
 			top: -85px
 			left: -85px
@@ -453,28 +454,28 @@ body
 			font-weight: 600
 			text-align: center
 			transform: rotate(-45deg)
-			& span
+			span
 				position: absolute
 				bottom: 0
 				right: 0
 				left: 0
 
-		& .info
+		.info
 			padding: 25px
 			font-weight: 600
 			font-size: 13.2px
 
-			& .text
+			.text
 				width: 100%
 
-			& .title
+			.title
 				font-weight: bold
 				padding: 0
 				font-size: 17.2px
-				& .city
+				.city
 					text-transform: uppercase
 
-			& .clip
+			.clip
 				overflow: hidden
 				position: relative
 				max-height: 240px
@@ -491,13 +492,13 @@ body
 			.progress-bar
 				padding: 15px 0
 
-			& .meter
+			.meter
 				height: 15px
 				position: relative
 				background: #e3e3e3
 				border-radius: 25px
 				box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3)
-				& > span
+				> span
 					display: block
 					height: inherit
 					border-top-left-radius: 25px
@@ -506,26 +507,26 @@ body
 					z-index: 10
 					overflow: hidden
 
-			& .progress-bar-info
+			.progress-bar-info
 				font-size: 13.2px
 				padding-bottom: 30px
 				border-bottom: 1px solid #e3e3e3
 				text-transform: capitalize
-				& .progress
+				.progress
 					display: inline-block
 					float: left
-				& .days
+				.days
 					display: inline-block
 					float: right
 
-			& .pr-det
+			.pr-det
 				display: inline-block
 				float: right
 				margin: 25px 15px 20px 0
 				font-size: 15.2px
 				text-transform: capitalize
 				color: #515151
-				& .fa
+				.fa
 					font-size: 25px
 					position: relative
 					top: 4px
@@ -551,23 +552,23 @@ body
 	padding-bottom: 50px
 	z-index: -5
 
-	& .title
+	.title
 		font-size: 39.2px
 		font-weight: 600
 		color: #86ad09
 		padding-bottom: 40px
 
-	& .inner-wrapper
+	.inner-wrapper
 		max-width: 940px
 		margin: 0 auto
 		padding: 0 1.5%
 		text-align: center
 
-	& p
+	p
 		font-size: 19.2px
 		line-height: 38px
 
-	& .comment-list
+	.comment-list
 		//margin-top: 90px
 		text-align: start
 		overflow: hidden
@@ -575,7 +576,7 @@ body
 		margin: 90px -1.5% 0
 		padding: 5px
 
-		& .comment-item
+		.comment-item
 			display: inline-block
 			max-width: 42%
 			white-space: normal
@@ -583,7 +584,7 @@ body
 			position: relative
 			font-weight: 600
 
-			& .cloud
+			.cloud
 				background-color: #ffffff
 				padding: 22px 32px
 				border-radius: 15px
@@ -596,14 +597,14 @@ body
 					font-size: 13.2px
 					line-height: 23px
 
-			& .triangle
+			.triangle
 				width: 0
 				height: 0
 				margin-left: 20%
 				border-top: 20px solid #ffffff
 				border-right: 20px solid transparent
 
-			& .commentator
+			.commentator
 				margin-left: 15%
 				margin-top: 10px
 
@@ -627,13 +628,13 @@ body
 	padding: 65px 0 38px
 	border-bottom: 1px solid #6d6e70
 
-	& .partner-list
+	.partner-list
 		max-width: 1020px
 		margin: 0 auto
 		overflow: hidden
 		text-align: center
 
-	& .partner-item
+	.partner-item
 		display: inline-block
 		width: 140px
 		height: 32px
